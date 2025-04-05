@@ -8,8 +8,10 @@ import { FichiersExcelComponent } from './pages/fichiers-excel/fichiers-excel.co
 import { FichiersXMLComponent } from './pages/fichiers-xml/fichiers-xml.component';
 import { JournauxAuditComponent } from './pages/journaux-audit/journaux-audit.component';
 import { UtilisateursComponent } from './pages/utilisateurs/utilisateurs.component';
+import { LoginComponent } from './pages/login/login.component';
 
 export const routes: Routes = [
+  { path: 'login', component: LoginComponent },
   {
     path: '',
     component: LayoutComponent,

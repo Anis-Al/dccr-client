@@ -260,8 +260,8 @@ export class LayoutComponent {
   
   navItems: NavItem[] = [
     { label: 'Tableau de Bord', route: '/tableau-de-bord', icon: 'fa-chart-line' },
-    { label: 'Prêts', route: '/prets', icon: 'fa-money-check-alt' },
     { label: 'Fichiers Excel', route: '/fichiers-excel', icon: 'fa-file-excel' },
+    { label: 'Crédits', route: '/prets', icon: 'fa-money-bill' },
     { label: 'Fichiers XML', route: '/fichiers-xml', icon: 'fa-file-code' },
     { label: "Journaux d'Audit", route: '/journaux-audit', icon: 'fa-history' },
     { label: 'Utilisateurs', route: '/utilisateurs', icon: 'fa-users' }

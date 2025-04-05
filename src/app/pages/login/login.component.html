@@ -1,0 +1,47 @@
+<div class="login-container">
+  <h1 class="app-name">Déclarations Correctives SGA</h1>
+  
+  <div class="login-card">
+    <div class="logo-container">
+      <img src="assets/sga-logo.png" alt="SGA Logo" class="logo">
+    </div>
+    
+    <h2 class="title">Connexion</h2>
+
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="username">Matricule</label>
+        <div class="input-group">
+          <input 
+            type="text" 
+            id="username" 
+            formControlName="username"
+            placeholder="Entrez votre matricule"
+            [ngClass]="{'error': loginForm.get('username')?.invalid && loginForm.get('username')?.touched}">
+        </div>
+        <div class="error-message" *ngIf="loginForm.get('username')?.invalid && loginForm.get('username')?.touched">
+          Matricule est requis
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Mot de passe</label>
+        <div class="input-group">
+          <input 
+            type="password" 
+            id="password" 
+            formControlName="password"
+            placeholder="Entrez votre mot de passe"
+            [ngClass]="{'error': loginForm.get('password')?.invalid && loginForm.get('password')?.touched}">
+        </div>
+        <div class="error-message" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+          Mot de passe est requis
+        </div>
+      </div>
+
+      <button type="submit" class="login-button" [disabled]="loginForm.invalid">
+        Sign In
+      </button>
+    </form>
+  </div>
+</div>
